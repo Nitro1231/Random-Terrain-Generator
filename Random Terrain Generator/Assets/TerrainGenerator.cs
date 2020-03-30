@@ -76,7 +76,7 @@ public class TerrainGenerator : MonoBehaviour {
             Debug.Log("r: " + r + " | point: ( " + x + ", " + z + ")");
 
             // Get the corresponding index number based on coordinates that we previously got.
-            int index = z * size + x;
+            int index = z * (size + 1) + x;
             vertices[index] = new Vector3(vertices[index].x, 0, vertices[index].z);
             
             yield return new WaitForSeconds(0.01f);
